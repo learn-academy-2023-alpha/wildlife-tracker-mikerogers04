@@ -89,16 +89,27 @@ Branch: animal-sightings-specs
 Acceptance Criteria
 Validations will require specs in spec/models and the controller methods will require specs in spec/requests.
 
-Can see validation errors if an animal doesn't include a common name and scientific binomial
+[✅] Can see validation errors if an animal doesn't include a common name and scientific binomial
+-Added validation in app/models/animal.rb
+-Added rspec test in spec/models/animal_spec.rb
 
-Can see validation errors if a sighting doesn't include latitude, longitude, or a date
+[✅] Can see validation errors if a sighting doesn't include latitude, longitude, or a date
+-Added validation in app/models/sighting.rb
+-Added rspec test in spec/models/sighting_spec.rb
 
-Can see a validation error if an animal's common name exactly matches the scientific binomial
+[✅] Can see a validation error if an animal's common name exactly matches the scientific binomial
+-Added validation in app/models/animal.rb
+-Added rspec test in spec/models/animal_spec.rb
 
-Can see a validation error if the animal's common name and scientific binomial are not unique
+[✅] Can see a validation error if the animal's common name and scientific binomial are not unique
+-Added validation in app/models/animal.rb
+-Added rspec test in spec/models/animal_spec.rb
 
-Can see a status code of 422 when a post request can not be completed because of validation errors
+[✅] Can see a status code of 422 when a post request can not be completed because of validation errors
 Hint: Handling Errors in an API Application the Rails Way
+-Added status code errors on else statements in app/controllers/animals_controller.rb
+-Verified 422 status code appeared in Postman with a Post request with an invalid data type on scientific_binomial
+
 
 Story 5: In order to increase efficiency, as a user of the API, I need to add an animal and a sighting at the same time.
 
