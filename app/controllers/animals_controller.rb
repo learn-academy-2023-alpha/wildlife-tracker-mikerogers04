@@ -10,7 +10,7 @@ class AnimalsController < ApplicationController
     end
 
     def create
-        animal = Animal.create(params[:id])
+        animal = Animal.create(animal_params)
         if animal.valid?
             render json: animal
         else 
@@ -39,6 +39,6 @@ class AnimalsController < ApplicationController
 
     private
     def animal_params
-    params.require(:animal).permit(:strings, :common_name, :scientific_binomial)
+    params.require(:animal).permit(:strings, :common_name, :scientific_binomial, sightings_attributes: [:latitude, :longitude, :date])
     end
 end
