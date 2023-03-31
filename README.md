@@ -99,3 +99,12 @@ Can see a validation error if the animal's common name and scientific binomial a
 
 Can see a status code of 422 when a post request can not be completed because of validation errors
 Hint: Handling Errors in an API Application the Rails Way
+
+Story 5: In order to increase efficiency, as a user of the API, I need to add an animal and a sighting at the same time.
+
+Branch: submit-animal-with-sightings
+
+Acceptance Criteria
+
+Can create new animal along with sighting data in a single API request
+Hint: Look into accepts_nested_attributes_for
