@@ -9,4 +9,6 @@ class Animal < ApplicationRecord
             errors.add(:common_name, 'Common Name cannot match scientific binomial.')
         end
     end
+
+    accepts_nested_attributes_for :sightings
 end
